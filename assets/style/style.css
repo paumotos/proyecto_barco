@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+header {
+  background: rgba(0, 157, 255, 0.9);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+nav {
+  float: left;
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden; /* Limpiamos errores de float */
+}
+
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+nav ul li a {
+  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-inline: 30px;
+}
+
+nav ul li:hover {
+  background: #67baff;
+}
+
+.contenido {
+  padding-top: 80px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.inicio {
+  margin-left: 300px;
+}
+
+button.login {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 13px;
+  background: white;
+  border: none;
+  position: absolute;
+  right: 30px;
+}
