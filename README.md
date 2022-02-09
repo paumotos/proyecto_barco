@@ -1,2 +1,2 @@
-# proyecto_barco_mamahuevo
+# proyecto_barco
 MP06 
