@@ -1,66 +1,28 @@
-* {
-  padding: 0;
-  margin: 0;
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-p {
-  margin-bottom: 20px;
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }
 
-header {
-  background: rgba(0, 157, 255, 0.9);
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-}
-
-nav {
-  float: left;
-}
-
-nav ul {
-  list-style: none;
-  overflow: hidden; /* Limpiamos errores de float */
-}
-
-nav ul li {
-  float: left;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-}
-
-nav ul li a {
-  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-  padding: 20px;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  margin-inline: 30px;
-}
-
-nav ul li:hover {
-  background: #67baff;
-}
-
-.contenido {
-  padding-top: 80px;
-}
-
-.wrapper {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.inicio {
-  margin-left: 300px;
-}
-
-button.login {
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 13px;
-  background: white;
+a#btnReserva {
+  padding-inline: 40px;
+  line-height: 50px;
+  background-color: #1c8fdf;
   border: none;
-  position: absolute;
-  right: 30px;
+  border-radius: 15px;
+  font-size: 25px;
+  transition: transform 0.8s;
+}
+
+a#btnReserva:hover {
+  transform: scale(1.1);
+  background-color: #1c8fdfd4;
 }
