@@ -2,7 +2,7 @@
 $usuarioValue=$_POST["username"];
 $contraValue=$_POST["password"];
 
-$dbLink=mysqli_connect("localhost","root","root","goActivity") or exit(mysqli_connect_error());
+$dbLink=mysqli_connect("localhost","root","root","proyectoBarca") or exit(mysqli_connect_error());
 
 
 $sql="SELECT * FROM tb_usuarios WHERE Usuario='$usuarioValue' AND Contrasenya='$contraValue';";
@@ -12,7 +12,7 @@ if(mysqli_num_rows($result)==1){
 	session_start();
 	$_SESSION["usuarioSESSION"]=$usuarioValue;
 	$_SESSION["login"]=true;
-	header("Location:index.html");
+	header("Location:index.php");
 }else { ?>
 	<h3><i>El usuario o la contraseña es incorrecta</i></h3>
 	<a href=login.php>Volver a logear</a> <?php 

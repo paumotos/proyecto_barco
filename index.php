@@ -142,12 +142,18 @@
                 <button type="button" class="btn btn-sm btn-outline-secondary">
                   Edit
                 </button>
+                
               </div>
               <small class="text-muted">9 mins</small>
             </div>
           </div>
         </div>
       </div>
+      <?php
+      session_start();
+      echo "Usuario: ".$_SESSION["usuarioSESSION"];
+      ?>
+
     </main>
 
     <footer class="text-muted py-5">
