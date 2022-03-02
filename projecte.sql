@@ -1,15 +1,19 @@
 /* Guille Mendoza || Pau Motos */
-DROP DATABASE projecteBarca;
-CREATE DATABASE projecteBarca;
-USE projecteBarca;
+DROP DATABASE proyectoBarca;
+CREATE DATABASE proyectoBarca;
+USE proyectoBarca;
 
-CREATE TABLE tb_usuaris 
-(id_usuari INT PRIMARY KEY AUTO_INCREMENT, 
-Nom VARCHAR (25),
-Usuari VARCHAR (15),
-Cognom VARCHAR (20),
-Data_naixament DATE,
+CREATE TABLE tb_usuarios 
+(id_usuario INT PRIMARY KEY AUTO_INCREMENT, 
+Nombre VARCHAR (25),
+Usuario VARCHAR (15),
+Apellido VARCHAR (20),
+Fecha_Nacimiento DATE,
 Gmail VARCHAR(50),
-Contrasenya VARCHAR (10)
+Contrasenya VARCHAR (15)
 );
 
+
+INSERT INTO tb_usuarios VALUES
+(1,"Guille","gmendo","Mendoza","2001-05-07","gmendo@gmail.com","P@ssw0rd"),
+(2,"Pau","pmotos","Motos","2001-03-03","pmotos@gmail.com","P@ssw0rd");
