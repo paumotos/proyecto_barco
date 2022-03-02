@@ -1,6 +1,6 @@
 <?php
-$usuarioValue=$_POST["usuari"];
-$contraValue=$_POST["contrasenya"];
+$usuarioValue=$_POST["username"];
+$contraValue=$_POST["password"];
 
 $dbLink=mysqli_connect("localhost","usuari","123456","goActivity") or exit(mysqli_connect_error());
 

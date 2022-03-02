@@ -29,7 +29,7 @@
         >
           <div id="login-column" class="col-md-6">
             <div id="login-box" class="col-md-12">
-              <form id="login-form" class="form" action="" method="post">
+              <form id="login-form" class="form" action=validarUser.php method="POST">
                 <h3
                   style="font-size: 70px; margin-bottom: 40px"
                   class="text-center text-info"
