@@ -2,7 +2,7 @@
 $usuarioValue=$_POST["usuari"];
 $contraValue=$_POST["contrasenya"];
 
-$dbLink=mysqli_connect("localhost","usuari","123456","goActivity") or exit(mysqli_connect_error());
+$dbLink=mysqli_connect("localhost","root","root","goActivity") or exit(mysqli_connect_error());
 
 
 $sql="SELECT * FROM tb_usuarios WHERE Usuario='$usuarioValue' AND Contrasenya='$contraValue';";
