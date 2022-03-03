@@ -28,6 +28,14 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <?php 
+      session_start();
+      if(!isset($_SESSION["login"]))
+        header("location:login.php");
+      elseif(!$_SESSION["login"])
+        header("location:login.php");
+      
+    ?>
   </head>
   <body>
     <header>
@@ -98,6 +106,7 @@
     </header>
 
     <main class="main">
+      <span style="margin-left:20px;">Bienvenido de nuevo <?php echo $_SESSION["usuarioSESSION"]; ?></span>
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="row-lg-6 col-md-8 mx-auto">
@@ -149,10 +158,7 @@
           </div>
         </div>
       </div>
-      <?php
-      session_start();
-      echo "Usuario: ".$_SESSION["usuarioSESSION"];
-      ?>
+      
 
     </main>
 
