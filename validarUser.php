@@ -7,10 +7,12 @@ $dbLink=mysqli_connect("localhost","root","root","proyectoBarca") or exit(mysqli
 
 $sql="SELECT * FROM tb_usuarios WHERE Usuario='$usuarioValue' AND Contrasenya='$contraValue';";
 $result=mysqli_query($dbLink,$sql) or exit (mysqli_error($dbLink));
-
+$reg = mysqli_fetch_array($result);
 if(mysqli_num_rows($result)==1){
 	session_start();
 	$_SESSION["usuarioSESSION"]=$usuarioValue;
+	$_SESSION["nombreSESSION"]=$reg["Nombre"];
+	$_SESSION["apellidoSESSION"]=$reg["Apellido"];
 	$_SESSION["login"]=true;
 	header("Location:indexLogin.php");
 }else { ?>

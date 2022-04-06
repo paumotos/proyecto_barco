@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" />
-    <meta name="generator" content="Hugo 0.88.1" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/style.css" />
-    <title>Barco</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.1/examples/album/"
@@ -20,6 +17,11 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <style>
+        #asiento {
+            transform: scale(1.5);
+        }
+    </style>
     <!-- Bootstrap core CSS -->
 
     <!-- JavaScript Bundle with Popper -->
@@ -28,17 +30,10 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <?php 
-      session_start();
-      if(!isset($_SESSION["login"]))
-        header("location:login.php");
-      elseif(!$_SESSION["login"])
-        header("location:login.php");
-      
-    ?>
-  </head>
-  <body>
-    <header>
+    <title>RESERVA || BARCA</title>
+</head>
+<body>
+<header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
@@ -97,8 +92,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <button class="navbar-toggler" type="submit">
-            <a style="text-decoration: none; color: grey" href="./login.php"
-              >LOGIN</a
+            <a style="text-decoration: none; color: grey" href="./logout.php"
+              >LOGOUT</a
             >
           </button>
         </div>
@@ -106,19 +101,7 @@
     </header>
 
     <main class="main">
-      <section class="py-5 text-center container">
-        <div class="row py-lg-5">
-          <div class="row-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Reserva el teu viatge</h1>
-            <p class="lead text-muted">{text de exemple}</p>
-            <p>
-              <a href="#" id="btnReserva" class="btn btn-primary my-2"
-                >RESERVA</a
-              >
-            </p>
-          </div>
-        </div>
-      </section>
+      
       <div class="col">
         <div class="card shadow-sm">
           <svg
@@ -136,24 +119,25 @@
             <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
           </svg>
 
-          <div class="card-body">
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                  View
-                </button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                  Edit
-                </button>
+          <div style="position:relative;" class="card-body">
+            <img src="./assets/img/barca_mapa.gif">
+            <form action="enviar_reservas.php">
+                <input id="asiento" style="position: absolute;top: 42%;left: 64px;" type="checkbox">
+                <input id="asiento" style="position: absolute;top: 53.5%;left: 64px;" type="checkbox">
+                <input id="asiento" style="position: absolute;top: 66%;left: 64px;" type="checkbox">
+
+                <input id="asiento" style="position: absolute;top: 25%;left: 121px;" type="checkbox">
+                <input id="asiento" style="position: absolute;top: 34%;left: 121px;" type="checkbox">
+                <input id="asiento" style="position: absolute;top: 58%;left: 121px;" type="checkbox">
+                <input id="asiento" style="position: absolute;top: 67%;left: 121px;" type="checkbox"> 
+
+                <input id="asiento" style="position: absolute;top: 25%;left: 186px;" type="checkbox">
+                <input id="asiento" style="position: absolute;top: 34%;left: 186px;" type="checkbox"> 
+                <input id="asiento" style="position: absolute;top: 58%;left: 186px;" type="checkbox"> 
+                <input id="asiento" style="position: absolute;top: 67%;left: 186px;" type="checkbox">  
+
                 
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -180,5 +164,6 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="./assets/js/index.js"></script>
-  </body>
+    
+</body>
 </html>

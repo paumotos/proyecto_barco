@@ -106,7 +106,7 @@
     </header>
 
     <main class="main">
-      <span style="margin-left:20px;">Bienvenido de nuevo <?php echo $_SESSION["usuarioSESSION"]; ?></span>
+      <span style="margin-left:20px;">Bienvenido de nuevo <?php echo $_SESSION["usuarioSESSION"];?> ( <?php echo $_SESSION["nombreSESSION"]; ?> <?php echo $_SESSION["apellidoSESSION"]; ?> )</span>
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="row-lg-6 col-md-8 mx-auto">
@@ -162,7 +162,7 @@
 
     </main>
 
-    <footer class="text-muted py-5">
+    <footer class="text-muted py-5 fixed-bottom">
       <div class="container">
         <p class="float-end mb-1">
           <a href="#">Back to top</a>
