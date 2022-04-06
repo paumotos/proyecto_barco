@@ -97,8 +97,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <button class="navbar-toggler" type="submit">
-            <a style="text-decoration: none; color: grey" href="./login.php"
-              >LOGIN</a
+            <a style="text-decoration: none; color: grey" href="./logout.php"
+              >LOGOUT</a
             >
           </button>
         </div>
@@ -106,6 +106,7 @@
     </header>
 
     <main class="main">
+      <span style="margin-left:20px;">Bienvenido de nuevo <?php echo $_SESSION["usuarioSESSION"]; ?></span>
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="row-lg-6 col-md-8 mx-auto">

@@ -12,7 +12,7 @@ if(mysqli_num_rows($result)==1){
 	session_start();
 	$_SESSION["usuarioSESSION"]=$usuarioValue;
 	$_SESSION["login"]=true;
-	header("Location:index.php");
+	header("Location:indexLogin.php");
 }else { ?>
 	<h3><i>El usuario o la contraseña es incorrecta</i></h3>
 	<a href=login.php>Volver a logear</a> <?php 
