@@ -113,7 +113,7 @@
             <h1 class="fw-light">Reserva el teu viatge</h1>
             <p class="lead text-muted">{text de exemple}</p>
             <p>
-              <a href="#" id="btnReserva" class="btn btn-primary my-2"
+              <a href="./reserva.php" id="btnReserva" class="btn btn-primary my-2"
                 >RESERVA</a
               >
             </p>

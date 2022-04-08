@@ -18,8 +18,48 @@
       crossorigin="anonymous"
     />
     <style>
-        #asiento {
-            transform: scale(1.5);
+        #asiento1 input:checked ~ .checkmark {
+          transform: scale(1.5);
+          background-color: green;
+        }
+
+        .card-body {
+          /* background-color: red; */
+          width: 607px;
+          margin: 0 auto;
+          transform: scale(1.7);
+          /* position: absolute; */
+          margin-top: 85px;
+          margin-bottom: 300px;
+        }
+
+        .formulario_reyenar {
+          width: 403px;
+          margin: 0 auto;
+          text-align-last: center;
+          margin-top: 62px;
+        }
+
+        footer.text-muted.py-5.fixed-bottom {
+          background-color: #212529;
+          color: white;
+        }
+
+        input#exampleFormControlInput1 {
+          margin-top: 23px;
+          border-radius: 20px;
+        }  
+
+        textarea#exampleFormControlTextarea1 {
+          margin-top: 23px;
+          border-radius: 20px;
+        }
+
+        button.btn.btn-primary {
+          margin-top: 20px;
+          border-radius: 20px;
+          padding: 12px;
+          /* border-inline: 203px; */
         }
     </style>
     <!-- Bootstrap core CSS -->
@@ -104,7 +144,7 @@
       
       <div class="col">
         <div class="card shadow-sm">
-          <svg
+          <!-- <svg
             class="bd-placeholder-img card-img-top"
             width="100%"
             height="225"
@@ -117,27 +157,78 @@
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c" />
             <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-
+          </svg> -->
+          <div class="formulario_reyenar">          
+            <form action="enviar_reservas.php" id="formulario_reserva">
+            <div class="form-group">
+              <!-- <label for="exampleFormControlInput1">Nombre</label> -->
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <!-- <label for="exampleFormControlInput1">Apellido</label> -->
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+            </div>
+            <div class="form-group">
+              <!-- <label for="exampleFormControlInput1">Correo</label> -->
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo">
+            </div>
+            <div class="form-group">
+              <!-- <label for="exampleFormControlInput1">Telefono</label> -->
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Telefono">
+            </div>
+            <div class="form-group">
+              <!-- <label for="exampleFormControlTextarea1">Comentarios</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" >Reservar</button>
+            </form>          
+          </div>
           <div style="position:relative;" class="card-body">
             <img src="./assets/img/barca_mapa.gif">
-            <form action="enviar_reservas.php">
-                <input id="asiento" style="position: absolute;top: 42%;left: 64px;" type="checkbox">
-                <input id="asiento" style="position: absolute;top: 53.5%;left: 64px;" type="checkbox">
-                <input id="asiento" style="position: absolute;top: 66%;left: 64px;" type="checkbox">
+            <form action="enviar_reservas.php" id="imagen_reserva">
+                <input id="asiento1" style="position: absolute;top: 42%;left: 64px;" type="checkbox">
+                <input id="asiento2" style="position: absolute;top: 53.5%;left: 64px;" type="checkbox">
+                <input id="asiento3" style="position: absolute;top: 66%;left: 64px;" type="checkbox">
 
-                <input id="asiento" style="position: absolute;top: 25%;left: 121px;" type="checkbox">
-                <input id="asiento" style="position: absolute;top: 34%;left: 121px;" type="checkbox">
-                <input id="asiento" style="position: absolute;top: 58%;left: 121px;" type="checkbox">
-                <input id="asiento" style="position: absolute;top: 67%;left: 121px;" type="checkbox"> 
+                <input id="asiento4" style="position: absolute;top: 25%;left: 121px;" type="checkbox">
+                <input id="asiento5" style="position: absolute;top: 34%;left: 121px;" type="checkbox">
+                <input id="asiento6" style="position: absolute;top: 58%;left: 121px;" type="checkbox">
+                <input id="asiento7" style="position: absolute;top: 67%;left: 121px;" type="checkbox"> 
 
-                <input id="asiento" style="position: absolute;top: 25%;left: 186px;" type="checkbox">
-                <input id="asiento" style="position: absolute;top: 34%;left: 186px;" type="checkbox"> 
-                <input id="asiento" style="position: absolute;top: 58%;left: 186px;" type="checkbox"> 
-                <input id="asiento" style="position: absolute;top: 67%;left: 186px;" type="checkbox">  
+                <input id="asiento8" style="position: absolute;top: 25%;left: 141px;" type="checkbox">
+                <input id="asiento9" style="position: absolute;top: 34%;left: 141px;" type="checkbox">
+                <input id="asiento10" style="position: absolute;top: 58%;left: 141px;" type="checkbox">
+                <input id="asiento11" style="position: absolute;top: 67%;left: 141px;" type="checkbox"> 
 
+                <input id="asiento12" style="position: absolute;top: 25%;left: 186px;" type="checkbox">
+                <input id="asiento13" style="position: absolute;top: 34%;left: 186px;" type="checkbox"> 
+                <input id="asiento14" style="position: absolute;top: 58%;left: 186px;" type="checkbox"> 
+                <input id="asiento15" style="position: absolute;top: 67%;left: 186px;" type="checkbox">  
+               
+                <input id="asiento16" style="position: absolute;top: 25%;left: 206px;" type="checkbox">
+                <input id="asiento17" style="position: absolute;top: 34%;left: 206px;" type="checkbox"> 
+                <input id="asiento18" style="position: absolute;top: 58%;left: 206px;" type="checkbox"> 
+                <input id="asiento19" style="position: absolute;top: 67%;left: 206px;" type="checkbox"> 
                 
+                <input id="asiento20" style="position: absolute;top: 25%;left: 250px;" type="checkbox">
+                <input id="asiento21" style="position: absolute;top: 34%;left: 250px;" type="checkbox"> 
+                <input id="asiento22" style="position: absolute;top: 58%;left: 250px;" type="checkbox"> 
+                <input id="asiento23" style="position: absolute;top: 67%;left: 250px;" type="checkbox">  
+
+                <input id="asiento24" style="position: absolute;top: 25%;left: 270px;" type="checkbox">
+                <input id="asiento25" style="position: absolute;top: 34%;left: 270px;" type="checkbox"> 
+                <input id="asiento26" style="position: absolute;top: 58%;left: 270px;" type="checkbox"> 
+                <input id="asiento27" style="position: absolute;top: 67%;left: 270px;" type="checkbox">  
+
+                <input id="asiento28" style="position: absolute;top: 25%;left: 315px;" type="checkbox">
+                <input id="asiento29" style="position: absolute;top: 34%;left: 315px;" type="checkbox"> 
+                <input id="asiento30" style="position: absolute;top: 58%;left: 315px;" type="checkbox"> 
+                <input id="asiento31" style="position: absolute;top: 67%;left: 315px;" type="checkbox">  
+  
             </form>
+
+          <!-- Haremos un formulario al lado de la imagen para reservar los sitios en el barco -->
+          
           </div>
         </div>
       </div>
@@ -145,18 +236,10 @@
 
     </main>
 
-    <footer class="text-muted py-5 fixed-bottom">
+    <footer class="text-muted py-5 fixed-bottom" style="position: relative; !important">
       <div class="container">
         <p class="float-end mb-1">
           <a href="#">Back to top</a>
-        </p>
-        <p class="mb-1">
-          Album example is &copy; Bootstrap, but please download and customize
-          it for yourself!
-        </p>
-        <p class="mb-0">
-          New to Bootstrap? <a href="/">Visit the homepage</a> or read our
-          <a href="../getting-started/introduction/">getting started guide</a>.
         </p>
       </div>
     </footer>
