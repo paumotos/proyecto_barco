@@ -28,14 +28,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <?php 
-      session_start();
-      if(!isset($_SESSION["login"]))
-        header("location:login.php");
-      elseif(!$_SESSION["login"])
-        header("location:login.php");
-      
-    ?>
   </head>
   <body>
     <header>
@@ -97,8 +89,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <button class="navbar-toggler" type="submit">
-            <a style="text-decoration: none; color: grey" href="./login.php"
-              >LOGIN</a
+            <a style="text-decoration: none; color: grey" href="./logout.html"
+              >LOGOUT</a
             >
           </button>
         </div>
@@ -106,13 +98,17 @@
     </header>
 
     <main class="main">
+      <span style="margin-left: 20px"></span>
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="row-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">Reserva el teu viatge</h1>
             <p class="lead text-muted">{text de exemple}</p>
             <p>
-              <a href="#" id="btnReserva" class="btn btn-primary my-2"
+              <a
+                href="./reserva.html"
+                id="btnReserva"
+                class="btn btn-primary my-2"
                 >RESERVA</a
               >
             </p>
@@ -150,15 +146,12 @@
                 <button type="button" class="btn btn-sm btn-outline-secondary">
                   Edit
                 </button>
-                
               </div>
               <small class="text-muted">9 mins</small>
             </div>
           </div>
         </div>
       </div>
-      
-
     </main>
 
     <footer class="text-muted py-5 fixed-bottom">
