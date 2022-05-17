@@ -19,7 +19,8 @@ nombreUsuario VARCHAR (25),
 apellidoUsuario VARCHAR (20),
 correoUsuario VARCHAR (50),
 fechaReserva DATE,
-comentario VARCHAR (100)
+comentario VARCHAR (100),
+asiento INT
 );
 
 
