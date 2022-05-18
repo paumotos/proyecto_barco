@@ -55,3 +55,41 @@ function reserva() {
     }
   );
 }
+
+function reservar() {
+  console.log("Hola mundo");
+  let nombre = document.getElementById("nombre").value;
+  let apellidos = document.getElementById("apellidos").value;
+  let email = document.getElementById("email").value;
+  let telefono = document.getElementById("telefono").value;
+  let fecha = document.getElementById("fecha").value;
+
+  // Nos conectamos a base de datos
+  const mysql = require("mysql");
+  mysql.connect(
+    {
+      host: "localhost",
+      user: "root",
+      password: "root",
+      database: "proyectoBarca",
+    },
+    function (err) {
+      if (err) {
+        console.log("Error: " + err);
+      } else {
+        console.log("Conexión a la BBDD correcta");
+        // Insertamos los datos en la tabla reserva
+        mysql.query(
+          `INSERT INTO reservas (id_reserva, nombreUsuario, apellidoUsuario, correoUsuario, telefono,fechaReserva, asiento) VALUES (null,${nombre} , ${apellidos}, ${email}, ${telefono}, ${fecha}, ${1})`,
+          function (err, result) {
+            if (err) {
+              console.log("Error: " + err);
+            } else {
+              console.log("Datos insertados correctamente");
+            }
+          }
+        );
+      }
+    }
+  );
+}

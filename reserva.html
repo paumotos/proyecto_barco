@@ -45,15 +45,14 @@
         color: white;
       }
 
-      input#exampleFormControlInput1 {
+      input[type="text"], [type="date"], [type="email"] {
         margin-top: 23px;
         border-radius: 20px;
       }
 
-      textarea#exampleFormControlTextarea1 {
-        margin-top: 23px;
-        border-radius: 20px;
-      }
+     img {
+       border-top: 30px;
+     }
 
       button.btn.btn-primary {
         margin-top: 20px;
@@ -158,13 +157,13 @@
             <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
           </svg> -->
           <div class="formulario_reyenar">
-            <form action="enviar_reservas.js" id="formulario_reserva">
+            <form id="formulario_reserva">
               <div class="form-group">
                 <!-- <label for="exampleFormControlInput1">Nombre</label> -->
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="nombre"
                   placeholder="Nombre"
                 />
               </div>
@@ -173,7 +172,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="apellidos"
                   placeholder="Apellido"
                 />
               </div>
@@ -182,7 +181,7 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="email"
                   placeholder="Correo"
                 />
               </div>
@@ -191,19 +190,20 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="telefono"
                   placeholder="Telefono"
                 />
               </div>
               <div class="form-group">
                 <!-- <label for="exampleFormControlTextarea1">Comentarios</label> -->
-                <textarea
+                <input
+                  type="date"
                   class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
+                  id="fecha"
+                  placeholder="Fecha"
+                ></input>
               </div>
-              <button type="submit" class="btn btn-primary">Reservar</button>
+              <button type="button" class="btn btn-primary" onclick="reservar()">Reservar</button>
             
           </div>
           <div style="position: relative" class="card-body">
@@ -421,10 +421,47 @@
       </div>
     </footer>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <!-- <script src="./assets/js/index.js"> -->
-      // reserva();
+
+    <script>
+      function reservar() {
+      console.log("Hola mundo");
+      let nombre = document.getElementById("nombre").value;
+      let apellidos = document.getElementById("apellidos").value;
+      let email = document.getElementById("email").value;
+      let telefono = document.getElementById("telefono").value;
+      let fecha = document.getElementById("fecha").value;
+
+      // Nos conectamos a base de datos
+      var mysql = require("mysql");
+      mysql.connect(
+        {
+          host: "localhost",
+          user: "root",
+          password: "root",
+          database: "proyectoBarca",
+        },
+        function (err) {
+          if (err) {
+            console.log("Error: " + err);
+          } else {
+            console.log("Conexión a la BBDD correcta");
+            // Insertamos los datos en la tabla reserva
+            mysql.query(
+              `INSERT INTO reservas (id_reserva, nombreUsuario, apellidoUsuario, correoUsuario, telefono,fechaReserva, asiento) VALUES (null,${nombre} , ${apellidos}, ${email}, ${telefono}, ${fecha}, ${1})`,
+              function (err, result) {
+                if (err) {
+                  console.log("Error: " + err);
+                } else {
+                  console.log("Datos insertados correctamente");
+                }
+              }
+            );
+          }
+        }
+      );
+    }
     </script>
   </body>
 </html>
