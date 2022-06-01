@@ -45,15 +45,14 @@
         color: white;
       }
 
-      input#exampleFormControlInput1 {
+      input[type="text"], [type="date"], [type="email"] {
         margin-top: 23px;
         border-radius: 20px;
       }
 
-      textarea#exampleFormControlTextarea1 {
-        margin-top: 23px;
-        border-radius: 20px;
-      }
+     img {
+       border-top: 30px;
+     }
 
       button.btn.btn-primary {
         margin-top: 20px;
@@ -173,7 +172,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="nombre"
                   placeholder="Nombre"
                 />
               </div>
@@ -182,7 +181,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="apellidos"
                   placeholder="Apellido"
                 />
               </div>
@@ -191,7 +190,7 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="email"
                   placeholder="Correo"
                 />
               </div>
@@ -200,185 +199,217 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
+                  id="telefono"
                   placeholder="Telefono"
                 />
               </div>
               <div class="form-group">
                 <!-- <label for="exampleFormControlTextarea1">Comentarios</label> -->
-                <textarea
+                <input
+                  type="date"
                   class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
+                  id="fecha"
+                  placeholder="Fecha"
+                ></input>
               </div>
-              <button type="submit" class="btn btn-primary">Reservar</button>
-            </form>
+              <button type="button" class="btn btn-primary" onclick="reservar()">Reservar</button>
+            
           </div>
           <div style="position: relative" class="card-body">
             <img src="./assets/img/barca_mapa.gif" />
-            <form action="enviar_reservas.php" id="imagen_reserva">
+            
               <input
                 id="asiento1"
                 style="position: absolute; top: 42%; left: 64px"
                 type="checkbox"
+                value="1"
               />
               <input
                 id="asiento2"
                 style="position: absolute; top: 53.5%; left: 64px"
                 type="checkbox"
+                value="2"
               />
               <input
                 id="asiento3"
                 style="position: absolute; top: 66%; left: 64px"
                 type="checkbox"
+                value="3"
               />
 
               <input
                 id="asiento4"
                 style="position: absolute; top: 25%; left: 121px"
                 type="checkbox"
+                value="4"
               />
               <input
                 id="asiento5"
                 style="position: absolute; top: 34%; left: 121px"
                 type="checkbox"
+                value="5"
               />
               <input
                 id="asiento6"
                 style="position: absolute; top: 58%; left: 121px"
                 type="checkbox"
+                value="6"
               />
               <input
                 id="asiento7"
                 style="position: absolute; top: 67%; left: 121px"
                 type="checkbox"
+                value="7"
               />
 
               <input
                 id="asiento8"
                 style="position: absolute; top: 25%; left: 141px"
                 type="checkbox"
+                value="8"
               />
               <input
                 id="asiento9"
                 style="position: absolute; top: 34%; left: 141px"
                 type="checkbox"
+                value="9"
               />
               <input
                 id="asiento10"
                 style="position: absolute; top: 58%; left: 141px"
                 type="checkbox"
+                value="10"
               />
               <input
                 id="asiento11"
                 style="position: absolute; top: 67%; left: 141px"
                 type="checkbox"
+                value="11"
               />
 
               <input
                 id="asiento12"
                 style="position: absolute; top: 25%; left: 186px"
                 type="checkbox"
+                value="12"
               />
               <input
                 id="asiento13"
                 style="position: absolute; top: 34%; left: 186px"
                 type="checkbox"
+                value="13"
               />
               <input
                 id="asiento14"
                 style="position: absolute; top: 58%; left: 186px"
                 type="checkbox"
+                value="14"
               />
               <input
                 id="asiento15"
                 style="position: absolute; top: 67%; left: 186px"
                 type="checkbox"
+                value="15"
               />
 
               <input
                 id="asiento16"
                 style="position: absolute; top: 25%; left: 206px"
                 type="checkbox"
+                value="16"
               />
               <input
                 id="asiento17"
                 style="position: absolute; top: 34%; left: 206px"
                 type="checkbox"
+                value="17"
               />
               <input
                 id="asiento18"
                 style="position: absolute; top: 58%; left: 206px"
                 type="checkbox"
+                value="18"
               />
               <input
                 id="asiento19"
                 style="position: absolute; top: 67%; left: 206px"
                 type="checkbox"
+                value="19"
               />
 
               <input
                 id="asiento20"
                 style="position: absolute; top: 25%; left: 250px"
                 type="checkbox"
+                value="20"
               />
               <input
                 id="asiento21"
                 style="position: absolute; top: 34%; left: 250px"
                 type="checkbox"
+                value="21"
               />
               <input
                 id="asiento22"
                 style="position: absolute; top: 58%; left: 250px"
                 type="checkbox"
+                value="22"
               />
               <input
                 id="asiento23"
                 style="position: absolute; top: 67%; left: 250px"
                 type="checkbox"
+                value="23"
               />
 
               <input
                 id="asiento24"
                 style="position: absolute; top: 25%; left: 270px"
                 type="checkbox"
+                value="24"
               />
               <input
                 id="asiento25"
                 style="position: absolute; top: 34%; left: 270px"
                 type="checkbox"
+                value="25"
               />
               <input
                 id="asiento26"
                 style="position: absolute; top: 58%; left: 270px"
                 type="checkbox"
+                value="26"
               />
               <input
                 id="asiento27"
                 style="position: absolute; top: 67%; left: 270px"
                 type="checkbox"
+                value="27"
               />
 
               <input
                 id="asiento28"
                 style="position: absolute; top: 25%; left: 315px"
                 type="checkbox"
+                value="28"
               />
               <input
                 id="asiento29"
                 style="position: absolute; top: 34%; left: 315px"
                 type="checkbox"
+                value="29"
               />
               <input
                 id="asiento30"
                 style="position: absolute; top: 58%; left: 315px"
                 type="checkbox"
+                value="30"
               />
               <input
                 id="asiento31"
                 style="position: absolute; top: 67%; left: 315px"
                 type="checkbox"
+                value="31"
               />
             </form>
 
@@ -399,7 +430,47 @@
       </div>
     </footer>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <script>
+      function reservar() {
+      console.log("Hola mundo");
+      let nombre = document.getElementById("nombre").value;
+      let apellidos = document.getElementById("apellidos").value;
+      let email = document.getElementById("email").value;
+      let telefono = document.getElementById("telefono").value;
+      let fecha = document.getElementById("fecha").value;
+
+      // Nos conectamos a base de datos
+      var mysql = require("mysql");
+      mysql.connect(
+        {
+          host: "localhost",
+          user: "root",
+          password: "root",
+          database: "proyectoBarca",
+        },
+        function (err) {
+          if (err) {
+            console.log("Error: " + err);
+          } else {
+            console.log("Conexión a la BBDD correcta");
+            // Insertamos los datos en la tabla reserva
+            mysql.query(
+              `INSERT INTO reservas (id_reserva, nombreUsuario, apellidoUsuario, correoUsuario, telefono,fechaReserva, asiento) VALUES (null,${nombre} , ${apellidos}, ${email}, ${telefono}, ${fecha}, ${1})`,
+              function (err, result) {
+                if (err) {
+                  console.log("Error: " + err);
+                } else {
+                  console.log("Datos insertados correctamente");
+                }
+              }
+            );
+          }
+        }
+      );
+    }
+    </script>
   </body>
 </html>
